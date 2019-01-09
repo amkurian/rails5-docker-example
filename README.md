@@ -1,24 +1,7 @@
-# README
+To create the database run **docker-compose run web rake db:create**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start the application run **docker-compose up** in the project directory
 
-Things you may want to cover:
+To stop the application run **docker-compose down** in the project directory
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you make changes to the Gemfile or the Compose file to try out some different configurations, you need to rebuild. Some changes require only **docker-compose up --build**, but a full rebuild requires a re-run of **docker-compose run web bundle install** to sync changes in the Gemfile.lock to the host, followed by **docker-compose up --build**.
